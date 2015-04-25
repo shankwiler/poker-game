@@ -1,3 +1,4 @@
+#include<iostream>
 #ifndef CARD_H
 #define CARD_H
 using namespace std;
@@ -15,4 +16,5 @@ public:
   string getNumber();
   string getImage();
 };
-#endif
+#endif // CARD_H
+
