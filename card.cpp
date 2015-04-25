@@ -8,7 +8,6 @@ using namespace std;
 Card::Card() {
 	int randomSuit;
 	int randomNumber;
-	srand(time(NULL)); // Use time as the seed for random values
 
 	// Assign one of four possible suits
 	randomSuit = rand() % 4 + 1;  // random values 1-4

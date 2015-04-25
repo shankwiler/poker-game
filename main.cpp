@@ -10,6 +10,7 @@
 using namespace std;
 
 int main() {
+    srand(time(0));
     al_init();
     ALLEGRO_DISPLAY *display ;
     display = al_create_display(900,500);
