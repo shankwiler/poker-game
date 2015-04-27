@@ -7,28 +7,29 @@
 #include "player.h"
 #include <stdlib.h> // For random
 #include <time.h>
+#include "game1.h"
 using namespace std;
 
 int main() {
-    srand(time(0));
     al_init();
     ALLEGRO_DISPLAY *display ;
+
     display = al_create_display(900,500);
+   Player newPlayer;
+al_init_image_addon();
 
-    al_init_image_addon();
-    Player newPlayer;
-    ALLEGRO_BITMAP *first=al_load_bitmap((newPlayer.getCard1()->getImage()).c_str());
-    ALLEGRO_BITMAP *second=al_load_bitmap((newPlayer.getCard2()->getImage()).c_str());
+GamePlay* game = new GamePlay;
+    ALLEGRO_BITMAP *first;
+    ALLEGRO_BITMAP *second;
 
-    al_draw_bitmap(first,350,150,NULL);
-
-    al_draw_bitmap(second,450,150,NULL);
+    game->display(first ,newPlayer.getCard1()->getImage() , 500 , 300 );
+    game->display(second ,newPlayer.getCard2()->getImage() , 700 , 300 );
 
     al_flip_display();
 
     al_rest(2.0);
     al_destroy_display(display);
-    al_destroy_bitmap(first);
-    al_destroy_bitmap(second);
+    game->destroy(first);
+     game->destroy(second);
 	return 0;
 }
