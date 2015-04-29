@@ -20,5 +20,5 @@ al_draw_bitmap(img,x,y,NULL);
 void GamePlay::destroy(ALLEGRO_BITMAP* allPtr){
   al_destroy_bitmap(allPtr);
 }
-#endif GAME1_H
+#endif
 
