@@ -22,20 +22,20 @@ public:
 
 Player::Player()
 {
-	//card1 = new Card;
-	//card2 = new Card;
+	card1 = nullptr;
+	card2 = nullptr;
 	money = 100;
 	inRound = true;
 }
 
 void Player::setCard1( Card * newCard)
 {
-	card1 = newCard;
+	card1 = nullptr;
 }
 
 void Player::setCard2( Card * newCard)
 {
-	card2 = newCard;
+	card2 = nullptr;
 }
 
 void Player::setMoney(double mon)
