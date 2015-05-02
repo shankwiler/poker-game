@@ -10,6 +10,7 @@ struct PlayerNode {
 class PlayerList {
 private:
 	PlayerNode* head;
+	int listSize;
 public:
 	PlayerList();
 	~PlayerList();
@@ -19,6 +20,7 @@ public:
 
 PlayerList::PlayerList() {
 	head = nullptr;
+	listSize = 4;
 }
 
 PlayerList::~PlayerList() {
