@@ -1,12 +1,12 @@
-#include<iostream>
 #ifndef CARD_H
 #define CARD_H
-using namespace std;
+#include <string>
+using std::string;
 
-struct Card {
-	string suit;
-	string number;
+struct Card
+{
+	int suit;
+	int number;
 	string image;
 };
 #endif // CARD_H
-
